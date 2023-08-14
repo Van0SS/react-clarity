@@ -15,11 +15,13 @@ export module clarity {
      * @param userId Unique ID of a user
      * @param sessionId - Optional ID for the user's session.
      * @param pageId - Optional ID for the current page.
+     * @param userHint - Optional non-identifying name for the user. If name is not explicitly provided, we automatically generate a redacted version of the userId
      */
     export function identify(
       userId: string,
       sessionId?: string,
-      pageId?: string
+      pageId?: string,
+      userHint?: string
     ): void;
 
     /**
